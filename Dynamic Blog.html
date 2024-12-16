@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      
+      header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      header .logo {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      
+      header nav ul {
+        list-style-type: none;
+        padding: 10px;
+      }
+      
+      header nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+      
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      
+      .blog-container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .post {
+        margin-bottom: 30px;
+      }
+      
+      .post h2 {
+        font-size: 24px;
+        color: #333;
+      }
+      
+      .date {
+        font-size: 14px;
+        color: #999;
+      }
+      
+      .content {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+      }
+      
+      footer p {
+        font-size: 14px;
+      }
+      
+      .post:hover {
+        background-color: #f1f1f1;
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+      }
+      
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dynamic Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">My Blog</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="blog-container">
+      <div class="post" id="post1">
+        <h2>First Blog Post</h2>
+        <p class="date">Published on: <span id="date1"></span></p>
+        <p class="content" id="content1">This is the content of the first blog post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec eros non felis consequat aliquam.</p>
+      </div>
+      
+      <div class="post" id="post2">
+        <h2>Second Blog Post</h2>
+        <p class="date">Published on: <span id="date2"></span></p>
+        <p class="content" id="content2">This is the content of the second blog post. Integer pretium justo sed lorem euismod, at dapibus erat eleifend.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Blog</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+// Import required libraries
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./styles.css"; // Create a styles.css file for styling
+
+// Home Page Component
+function Home() {
+  return (
+    <div className="page">
+      <h1>Welcome to My Website</h1>
+      <p>This is the home page. Navigate using the menu below.</p>
+      <Link to="/about">
+        <button className="responsive-button">Learn More About Us</button>
+      </Link>
+    </div>
+  );
+}
+
+// About Page Component
+function About() {
+  return (
+    <div className="page">
+      <h1>About Us</h1>
+      <p>This is the about page. Discover more about what we do.</p>
+      <Link to="/contact">
+        <button className="responsive-button">Contact Us</button>
+      </Link>
+    </div>
+  );
+}
+
+// Contact Page Component
+function Contact() {
+  return (
+    <div className="page">
+      <h1>Contact Us</h1>
+      <p>We would love to hear from you! Reach out using the form below.</p>
+      <Link to="/">
+        <button className="responsive-button">Go Back Home</button>
+      </Link>
+    </div>
+  );
+}
+
+// App Component
+function App() {
+  return (
+    <Router>
+      <nav className="navbar">
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/about" className="nav-link">About</Link>
+        <Link to="/contact" className="nav-link">Contact</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+}
+
+// Render the App
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+
+/* Content for styles.css:
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.page {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.responsive-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.responsive-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .responsive-button {
+    width: 100%;
+    font-size: 1.2em;
+  }
+}
+
+*/
